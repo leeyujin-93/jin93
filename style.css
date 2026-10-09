@@ -3,6 +3,10 @@ html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background:
 body { display: flex; flex-direction: column; height: 100dvh; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
 header { padding: 14px 20px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 header span { font-size: 19px; font-weight: 700; } header small { color: #b6a8cc; }
+#music-toggle { margin-left: auto; flex-shrink: 0; min-height: 44px; touch-action: manipulation; }
+#music-toggle[aria-pressed="true"] { background: #655080; }
+#music-status { position: absolute; top: calc(env(safe-area-inset-top) + 66px); left: 12px; right: 12px; z-index: 2; margin: 0; padding: 8px 12px; border-radius: 8px; background: #201a32ee; font-size: 12px; text-align: center; pointer-events: none; }
+@media (max-width: 390px) { header { gap: 8px; padding-left: 12px; padding-right: 12px; } header small { font-size: 10px; } #music-toggle { padding: 8px; font-size: 12px; } }
 main { flex: 1; min-height: 0; position: relative; }
 canvas { display: block; width: 100%; height: 100%; }
 #status { position: absolute; top: 12px; left: 0; width: 100%; text-align: center; margin: 0; padding: 8px; background: #171328cc; }
