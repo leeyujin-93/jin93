@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #171328; color: #eee8ff; font-family: system-ui, sans-serif; }
+body { display: flex; flex-direction: column; height: 100dvh; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+header { padding: 14px 20px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+header span { font-size: 19px; font-weight: 700; } header small { color: #b6a8cc; }
+main { flex: 1; min-height: 0; position: relative; }
+canvas { display: block; width: 100%; height: 100%; }
+#status { position: absolute; top: 12px; left: 0; width: 100%; text-align: center; margin: 0; padding: 8px; background: #171328cc; }
+#status[hidden] { display: none; }
+footer { display: flex; align-items: center; justify-content: center; gap: 26px; padding: 14px 18px 20px; background: #201a32; flex-shrink: 0; }
+#joystick { width: 128px; height: 128px; position: relative; border-radius: 50%; border: 1px solid #b6a2df66; background: radial-gradient(circle, #59437466, #322740); touch-action: none; user-select: none; flex-shrink: 0; }
+#joystick::before, #joystick::after { content: ''; position: absolute; background: #b6a2df22; }
+#joystick::before { width: 1px; height: 90px; left: 63px; top: 19px; } #joystick::after { height: 1px; width: 90px; top: 63px; left: 19px; }
+#stick { position: absolute; left: 39px; top: 39px; width: 48px; height: 48px; border-radius: 50%; background: #c6b1ed; box-shadow: 0 4px 16px #0005; pointer-events: none; z-index: 1; }
+.help strong { font-size: 14px; } .help p { color: #c1b4d5; font-size: 12px; line-height: 1.7; margin: 8px 0; }
+button { color: #eee8ff; background: #473559; border: 1px solid #806494; border-radius: 8px; padding: 9px 12px; cursor: pointer; }
+@media (orientation: landscape) and (max-height: 600px) { header { padding: 6px 16px; } footer { position: absolute; bottom: max(12px, env(safe-area-inset-bottom)); left: max(12px, env(safe-area-inset-left)); border-radius: 18px; padding: 10px; background: #201a3299; } .help { display: none; } #joystick { width: 128px; height: 128px; } }

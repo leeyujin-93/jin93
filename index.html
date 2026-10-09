@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171328">
+  <title>달빛신전 · 모바일 이동 테스트</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="walk-area.js" defer></script>
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <header><span>달빛신전</span><small>모바일 이동 테스트</small></header>
+  <main>
+    <canvas id="scene" aria-label="달빛신전에서 토끼 캐릭터가 이동하는 화면"></canvas>
+    <p id="status" role="status">신전을 불러오는 중…</p>
+  </main>
+  <footer>
+    <div id="joystick" role="group" aria-label="터치 이동 조이스틱"><div id="stick"></div></div>
+    <div class="help"><strong>신전을 천천히 둘러보세요</strong><p>왼쪽 조이스틱을 밀면 이동합니다.<br>PC에서는 방향키 또는 WASD</p><button id="reset" type="button">처음 위치로</button></div>
+  </footer>
+</body>
+</html>
