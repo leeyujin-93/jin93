@@ -9,6 +9,8 @@
     button.textContent = requested ? '🎵 음악 끄기' : '🎵 음악 켜기';
     button.setAttribute('aria-pressed', String(requested));
   }
+  // Match the PC game's music level. iPhone volume remains device-controlled.
+  audio.volume = 0.35;
   function stop() {
     revision++; requested = false; recovering = false;
     audio.pause(); update(); show();
@@ -21,7 +23,7 @@
     } else if (code === 2) {
       show('음악 연결이 끊겼어요. 음악 켜기를 눌러 다시 불러와 주세요.');
     } else if (code === 3 || code === 4) {
-      show('음악 파일을 읽지 못했어요. 음악 켜기를 눌러 다시 시도해 주세요.');
+      show('음악 파일을 읽지 못했어요. assets/temple-bgm.mp3 업로드를 확인해 주세요.');
     } else {
       show('음악이 중단됐어요. 음악 켜기를 눌러 다시 시작해 주세요.');
     }
